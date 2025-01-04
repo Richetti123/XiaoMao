@@ -99,7 +99,7 @@ loadChatgptDB();
 
 global.creds = 'creds.json'
 global.authFile = 'MichiBot'
-global.authFileJB  = 'MichiBotSubs'
+global.authFileJB  = 'GataJadiBot'
 global.rutaBot = join(__dirname, authFile)
 global.rutaJadiBot = join(__dirname, authFileJB)
 
@@ -229,7 +229,7 @@ conn.well = false
 if (!opts['test']) {
 if (global.db) setInterval(async () => {
 if (global.db.data) await global.db.write()
-if (opts['autocleartmp'] && (global.support || {}).find) (tmp = [os.tmpdir(), 'tmp', "MichiBotSubs"], tmp.forEach(filename => cp.spawn('find', [filename, '-amin', '2', '-type', 'f', '-delete'])))}, 30 * 1000)}
+if (opts['autocleartmp'] && (global.support || {}).find) (tmp = [os.tmpdir(), 'tmp', "GataJadiBot"], tmp.forEach(filename => cp.spawn('find', [filename, '-amin', '2', '-type', 'f', '-delete'])))}, 30 * 1000)}
 if (opts['server']) (await import('./server.js')).default(global.conn, PORT)
 async function getMessage(key) {
 if (store) {
@@ -289,7 +289,7 @@ process.on('uncaughtException', console.error);
 /* Echo por: https://github.com/elrebelde21 */
 
 /*async function connectSubBots() {
-const subBotDirectory = './MichiBotSubs';
+const subBotDirectory = './GataJadiBot';
 if (!existsSync(subBotDirectory)) {
 console.log('No se encontraron ningun sub-bots.');
 return;
@@ -493,17 +493,17 @@ unlinkSync(`./MichiBot/${files}`)
 } 
 function purgeSessionSB() {
 try {
-const listaDirectorios = readdirSync('./MichiBotSubs/');
+const listaDirectorios = readdirSync('./GataJadiBot/');
 let SBprekey = [];
 listaDirectorios.forEach(directorio => {
-if (statSync(`./MichiBotSubs/${directorio}`).isDirectory()) {
-const DSBPreKeys = readdirSync(`./MichibotSubs/${directorio}`).filter(fileInDir => {
+if (statSync(`./GataJadiBot/${directorio}`).isDirectory()) {
+const DSBPreKeys = readdirSync(`./GataJadiBot/${directorio}`).filter(fileInDir => {
 return fileInDir.startsWith('pre-key-')
 })
 SBprekey = [...SBprekey, ...DSBPreKeys];
 DSBPreKeys.forEach(fileInDir => {
 if (fileInDir !== 'creds.json') {
-unlinkSync(`./MichiBotSubs/${directorio}/${fileInDir}`)
+unlinkSync(`./GataJadiBot/${directorio}/${fileInDir}`)
 }})
 }})
 if (SBprekey.length === 0) {
@@ -514,7 +514,7 @@ console.log(chalk.bold.cyanBright(lenguajeGB.smspurgeSessionSB2()))
 console.log(chalk.bold.red(lenguajeGB.smspurgeSessionSB3() + err))
 }}
 function purgeOldFiles() {
-const directories = ['./MichiBot/', './MichibotSubs/']
+const directories = ['./MichiBot/', './GataJadiBot/']
 directories.forEach(dir => {
 readdirSync(dir, (err, files) => {
 if (err) throw err
