@@ -99,17 +99,10 @@ if (!delius.status) {
 return m.react("❌")}
 const downloadUrl = delius.data.download.url;
 await conn.sendMessage(m.chat, { video: { url: downloadUrl }, fileName: `${yt_play[0].title}.mp4`, mimetype: 'video/mp4', caption: `⟡ *${yt_play[0].title}*\n> ${wm}`}, { quoted: m })
-} catch (e1) {
-try {    
-const yt = await youtubedl(yt_play[0].url).catch(async _ => await youtubedlv2(yt_play[0].url))
-console.log(yt)
-let q = getBestVideoQuality(yt)
-console.log(q)
-await conn.sendMessage(m.chat, { video: { url: await yt.video[q].download() }, fileName: `${await yt.title}.mp4`, mimetype: 'video/mp4', caption: `⟡ *${yt_play[0].title}*\n⟡ \`${q}\` | ${await yt.video[q].fileSizeH}\n> ${wm}`}, { quoted: m })
 } catch (e) {
 await m.react('❌')
 console.log(e)
-}}}}}
+}}}}
 
 if (command == 'play3' || command == 'playdoc') {
 try {    
