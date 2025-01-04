@@ -71,7 +71,7 @@ let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? c
 let mentionedJid = [who]
 let username = conn.getName(who)
 let taguser = '@' + m.sender.split("@s.whatsapp.net")[0]
-let pp = gataVidMenu
+let pp = imagen1
 let vn = 'https://qu.ax/bfaM.mp3'
 let pareja = global.db.data.users[m.sender].pasangan 
 //let fsizedoc = '1'.repeat(10)
@@ -170,7 +170,7 @@ let menu = `${lenguajeGB['smsConfi2']()} *${user.genero === 0 ? '👤' : user.ge
 ⊜ *Pasatiempo(s)* ➺ ${user.pasatiempo === 0 ? '*Sin Registro*' : user.pasatiempo + '\n'}
 ⊜ *Experiencia ➟* ${exp} ⚡
 ⊜ *Diamantes ➟* ${limit} 💎
-⊜ *GataCoins ➟* ${money} 🐈
+⊜ *${wm}Coins ➟* ${money} 🐈
 ⊜ *Tokens ➟* ${joincount} 🪙
 
 *╭━〔 🐈 OPCIONES DE MENU 🐈 〕⬣*
@@ -211,9 +211,6 @@ let menu = `${lenguajeGB['smsConfi2']()} *${user.genero === 0 ? '👤' : user.ge
 ┃🎧 _${lenguajeGB['smsTex2']()}_ 🎧
 ┃➺ _${usedPrefix}audioefectomenu_
 ┃
-┃🔞 _${lenguajeGB['smsTex3']()}_ 🔞
-┃➺ _${usedPrefix}menu18 | hornymenu_
-┃
 ┃⚗️ _${lenguajeGB['smsTex21']()}_ ⚗️
 ┃➺ _${usedPrefix}rpgmenu_
 ┃
@@ -229,12 +226,8 @@ let menu = `${lenguajeGB['smsConfi2']()} *${user.genero === 0 ? '👤' : user.ge
 ┃💎 _${lenguajeGB['smsTex20']()}_ 💎
 ┃➺ _${usedPrefix}ownermenu_
 ┃
-┃✅ *_CUENTAS OFICIALES GATABOT_* ✅
-┃➺ _${usedPrefix}cuentasgatabot | cuentasgb_
-┃
 *╰━━━━━━━━━━━━━⬣*`.trim()
-await conn.sendFile(m.chat, gataImg, 'lp.jpg', menu, fkontak, false, { contextInfo: {mentionedJid, externalAdReply :{ mediaUrl: null, mediaType: 1, description: null, title: gt, body: ' 😻 𝗦𝘂𝗽𝗲𝗿 𝗚𝗮𝘁𝗮𝗕𝗼𝘁-𝗠𝗗 - 𝗪𝗵𝗮𝘁𝘀𝗔𝗽𝗽 ', previewType: 0, thumbnail: imagen4, sourceUrl: redesMenu}}}) 
-await conn.sendMessage(m.chat, { audio: { url: vn }, fileName: 'error.mp3', mimetype: 'audio/mp4', ptt: true }, { quoted: m }) 
+await conn.sendFile(m.chat, gataImg, 'lp.jpg', menu, fkontak, false, { contextInfo: {mentionedJid, externalAdReply :{ mediaUrl: null, mediaType: 1, description: null, title: gt, body: wm, previewType: 0, thumbnail: imagen4, sourceUrl: redesMenu}}}) 
 //conn.sendFile(m.chat, gataVidMenu.getRandom(), 'gata.mp4', menu, fkontak)
 }} catch (e) {
 await m.reply(lenguajeGB['smsMalError3']() + '\n*' + lenguajeGB.smsMensError1() + '*\n*' + usedPrefix + `${lenguajeGB.lenguaje() == 'es' ? 'reporte' : 'report'}` + '* ' + `${lenguajeGB.smsMensError2()} ` + usedPrefix + command)
