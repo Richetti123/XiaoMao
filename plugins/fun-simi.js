@@ -27,5 +27,5 @@ console.log(e)
 }}}
 handler.help = ['simsimi']
 handler.tags = ['General']
-handler.command = ['ioqwueoqiwueiosjdklwqeuoiqsdawseqwe', 'simi', 'simsimi'] 
+handler.command = ['simi', 'simsimi'] 
 export default handler
