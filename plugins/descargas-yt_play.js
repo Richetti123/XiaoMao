@@ -83,9 +83,13 @@ let ress = await ytdl.chooseFormat(infoo.formats, { filter: 'audioonly' })
 await conn.sendMessage(m.chat, { video: { url: await ress.url }, fileName: `${yt_play[0].title}.mp4`, mimetype: 'video/mp4', caption: `⟡ *${yt_play[0].title}*\n> ${wm}`}, { quoted: m })
 } catch (e1) {
 try {    
-const res = await fetch(`https://api.zenkey.my.id/api/download/ytmp3?apikey=zenkey&url=${yt_play[0].url}`)
-let { result } = await res.json()
-await conn.sendMessage(m.chat, { video: { url: await result.download.url }, fileName: `${yt_play[0].title}.mp4`, mimetype: 'video/mp4', caption: `⟡ *${yt_play[0].title}*\n> ${wm}`}, { quoted: m })
+const apiUrl = `https://deliriussapi-oficial.vercel.app/download/ytmp4?url=${encodeURIComponent(yt_play[0].url)}`;
+const apiResponse = await fetch(apiUrl);
+const delius = await apiResponse.json();
+if (!delius.status) {
+return m.react("❌")}
+const downloadUrl = delius.data.download.url;
+await conn.sendMessage(m.chat, { video: { url: downloadUrl }, fileName: `${yt_play[0].title}.mp4`, mimetype: 'video/mp4', caption: `⟡ *${yt_play[0].title}*\n> ${wm}`}, { quoted: m })
 } catch (e1) {
 try {    
 const apiUrl = `https://deliriussapi-oficial.vercel.app/download/ytmp4?url=${encodeURIComponent(yt_play[0].url)}`;
