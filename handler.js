@@ -101,7 +101,10 @@ if (!isNumber(user.regTime)) user.regTime = -1
 if (!isNumber(user.semangka)) user.semangka = 0
 if (!isNumber(user.stroberi)) user.stroberi = 0
 }
-	              		    
+
+if (!isNumber(user.counterPrivate)) user.counterPrivate = 0	    
+if (!isNumber(user.fechaActualBD)) user.fechaActualBD = 0 //kurt18                 		    
+if (!isNumber(user.fechaUltimoMsjInbox)) user.fechaUltimoMsjInbox = 0 //kurt18  	              		    
 if (!isNumber(user.afk)) user.afk = -1
 //if (!('autolevelup' in user))  user.autolevelup = true
 if (!isNumber(user.reporte)) user.reporte = 0
@@ -519,6 +522,9 @@ if (!user.rtrofi) user.rtrofi = 'Bronce'
 } else
 global.db.data.users[m.sender] = {
 midLanguage: 0,
+counterPrivate: 0,
+fechaActualBD: 0, //kurt18	 
+fechaUltimoMsjInbox: 0, //kurt18
 afk: -1,
 afkReason: '',
 reporte: 0,
@@ -976,7 +982,7 @@ if (!('sBye' in chat)) chat.sBye = ''
 if (!('sPromote' in chat)) chat.sPromote = ''             
 if (!('sDemote' in chat)) chat.sDemote = '' 
 if (!('sCondition' in chat)) chat.sCondition = JSON.stringify([{ grupo: { usuario: [], condicion: [], admin: '' }, prefijos: []}])
-if (!('sAutorespond' in chat)) chat.sAutorespond = '' 
+if (!('sAutorespond' in chat)) chat.sAutorespond = true 
 if (!('delete' in chat)) chat.delete = false                   
 if (!('modohorny' in chat)) chat.modohorny = true       
 if (!('stickers' in chat)) chat.stickers = false            
@@ -1023,7 +1029,7 @@ sBye: '',
 sPromote: '',
 sDemote: '', 
 sCondition: JSON.stringify([{ grupo: { usuario: [], condicion: [], admin: '' }, prefijos: []}]), 
-sAutorespond: '', 
+sAutorespond: true, 
 delete: false,
 modohorny: true,
 stickers: false,
