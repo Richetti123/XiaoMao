@@ -30,7 +30,7 @@ if (bot.antiPrivate && !isOwner && !isROwner) {
 await conn.sendPresenceUpdate('composing', m.chat)
 await conn.readMessages([m.key])
 await conn.reply(m.chat, mid.mAdvertencia + mid.smsprivado(m, cuentas), m, { mentions: [m.sender] })  
-await conn.updateBlockStatus(m.chat, 'block')
+await conn.updateBlockStatus(m.chat, 'unblock')
 //await this.updateBlockStatus(m.sender, 'block')
 }
 return !1
