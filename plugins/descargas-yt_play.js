@@ -34,15 +34,16 @@ const texto1 = `⌘━─━─≪ *YOUTUBE* ≫─━─━⌘
 await conn.sendFile(m.chat, yt_play[0].thumbnail, 'error.jpg', texto1, m, null, fake)
   
 if (command == 'play' || command == 'audio') {
-try {    
-const res = await fetch(`https://api.zenkey.my.id/api/download/ytmp3?apikey=zenkey&url=${yt_play[0].url}`)
+try {
+const res = await fetch(`https://api.zenkey.my.id/api/download/ytmp3?apikey=zenkey&url=${encodeURIComponent(args)}`)
 let { result } = await res.json()
 await conn.sendMessage(m.chat, { audio: { url: await result.download.url }, mimetype: 'audio/mpeg' }, { quoted: m })
-} catch (e) { 
+} catch (e) {
 try {
-let d3 = await fetch(`https://api.dorratz.com/v2/yt-mp3?url=${yt_play[0].url}`)
-await conn.sendMessage(m.chat, { audio: d3, mimetype: 'audio/mp4' }, { quoted: m })   
-} catch (e) { 
+const res = await fetch(`https://api.zenkey.my.id/api/download/ytmp3?apikey=zenkey&url=${encodeURIComponent(args)}`)
+let { result } = await res.json()
+await conn.sendMessage(m.chat, { audio: { url: await result.download.url }, mimetype: 'audio/mpeg' }, { quoted: m })
+} catch (e) {
 await m.react('❌')
 console.log(e)
 }}}
