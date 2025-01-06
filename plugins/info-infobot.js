@@ -5,7 +5,7 @@ import os from 'os';
 import moment from 'moment';
 import speed from 'performance-now';
 import { sizeFormatter } from 'human-readable';
-import si from 'systeminformation';
+//import si from 'systeminformation';
 
 let format = sizeFormatter({std: 'JEDEC',
 decimalPlaces: 2,
@@ -14,15 +14,15 @@ render: (literal, symbol) => `${literal} ${symbol}B`,
 });
 
 const used = process.memoryUsage();
-    let ram = await si.mem()
+ /* let ram = await si.mem()
     let cpu = await si.cpuCurrentSpeed()
     let disk = await si.fsSize()
-    let up = await si.time()
+    let up = await si.time()*/
       
 async function getSystemInfo() {
-let disk = await si.fsSize();
-const memInfo = await si.mem();
-const load = await si.currentLoad();
+//let disk = await si.fsSize();
+//const memInfo = await si.mem();
+//const load = await si.currentLoad();
     
 let cpuInfo = os.cpus();
 let modeloCPU = cpuInfo && cpuInfo.length > 0 ? cpuInfo[0].model : 'Modelo de CPU no disponible';
@@ -87,13 +87,13 @@ let pp = imagen1
 
 getSystemInfo().then(async (data) => {
 let info = `╭━━━━[ ${gt} ]━━━━━⬣
-┃➥ *CREADORA*
+┃➥ *CREADORA | CREATOR*
 ┃ღ *${wm}*
 ┃┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
-┃➥ *CONTACTO* 
+┃➥ *CONTACTO | CONTACT* 
 ┃ღ *${ig}*
 ┃┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
-┃𓃠 *VERSIÓN ACTUAL*
+┃𓃠 *VERSIÓN ACTUAL | VERSION*
 ┃ღ ${vs}
 ┃┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
 ┃➥ *PREFIJO*
@@ -126,7 +126,7 @@ let info = `╭━━━━[ ${gt} ]━━━━━⬣
 ┃➥ *GRUPOS REGISTRANDO* 
 ┃ღ ${toNum(totalchats)}/${totalchats}
 ┃┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
-┃➥ *USUARIOS REGISTRADOS* 
+┃➥ *USUARIOS REGISTRADO* 
 ┃ღ ${rtotalreg} de ${totalreg} users totales
 ┃┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
 ┃➥ *AUTOREAD*
