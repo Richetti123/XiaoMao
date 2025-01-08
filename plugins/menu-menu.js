@@ -116,7 +116,7 @@ let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? c
 let mentionedJid = [who]
 let username = conn.getName(who)
 let taguser = '@' + m.sender.split("@s.whatsapp.net")[0]
-let pp = gataVidMenu
+let pp = imagen1
 let pareja = global.db.data.users[m.sender].pasangan 
 const numberToEmoji = { "0": "0️⃣", "1": "1️⃣", "2": "2️⃣", "3": "3️⃣", "4": "4️⃣", "5": "5️⃣", "6": "6️⃣", "7": "7️⃣", "8": "8️⃣", "9": "9️⃣", }
 let lvl = level
@@ -210,18 +210,8 @@ ${generateCommand(commandsInfo, usedPrefix)}
 
 ${margen}
 
-> 💻 *COMANDOS - SUB BOT*\n
-${generateCommand(commandsJadiBot, usedPrefix)}
-
-${margen}
-
 > 🆘 *REPORTAR COMANDOS* 🆘\n
 ${generateCommand(commandsReport, usedPrefix)}
-
-${margen}
-
-> 🪅 *GATABOT TEMPORAL* 🪅\n
-${generateCommand(commandsLink, usedPrefix)}
 
 ${margen}
 
@@ -725,7 +715,7 @@ const commandsGames = [
 { comando: 'topotakus', descripcion: false, contexto: 'Clasificación de usuarios Otakus 🎌', showPrefix: true },
 { comando: 'toppajer@s', descripcion: false, contexto: 'Clasificación de usuarios pajeros 🥵', showPrefix: true },
 { comando: 'topintegrantes', descripcion: false, contexto: 'Mejores usuarios 👑', showPrefix: true },
-{ comando: 'toplagrasa', descripcion: false, contexto: 'Usuarios más grasosos XD', showPrefix: true },
+{ comando: 'top', descripcion: false, contexto: 'Elabora un top 10 de lo que quieras🥵', showPrefix: true },
 { comando: 'toplind@s', descripcion: false, contexto: 'Los más lindos 😻', showPrefix: true },
 { comando: 'topput@s', descripcion: false, contexto: 'Los más p**** 🫣', showPrefix: true },
 { comando: 'toppanafrescos', descripcion: false, contexto: 'Los que más critican 🗿', showPrefix: true },
