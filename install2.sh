@@ -1,21 +1,16 @@
-#!/bin/bash
+FROM fedora:37
 
-# Detener la ejecución si ocurre un error
-set -e
+RUN sudo dnf -y update &&\
+    sudo dnf install -y https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm &&\
+    sudo dnf install -y git ffmpeg ImageMagick nodejs yarnpkg libwebp &&\
+    sudo dnf clean all -y
 
-if [ -d "node_modules" ]; then
-    echo "La carpeta 'node_modules' ya existe. Omitiendo descarga e instalación."
-else
-    echo "Descargando node_modules.tar.gz..."
-    curl -L -o node_modules.tar.gz https://github.com/elrebelde21/NovaBot_MD/releases/download/1.1.8/node_modules.tar.gz
+RUN git clone https://github.com/GataNina-Li/GataBot-MD
 
-    echo "Extrayendo node_modules..."
-    tar -xzf node_modules.tar.gz
+WORKDIR /root/GataBot-MD
 
-    # Eliminar el archivo comprimido después de extraerlo
-    rm node_modules.tar.gz
+COPY ./root/GataBot-MD
 
-fi
+RUN yarn install
 
-echo "Iniciando el bot..."
-npm start
+CMD ["node", "index.js"]

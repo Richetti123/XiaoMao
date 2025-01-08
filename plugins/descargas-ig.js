@@ -10,18 +10,23 @@ const { key } = await conn.sendMessage(m.chat, {text: wait}, {quoted: fkontak});
 await conn.sendMessage(m.chat, {text: waitt, edit: key});
 await conn.sendMessage(m.chat, {text: waittt, edit: key});
 await conn.sendMessage(m.chat, {text: waitttt, edit: key});
-try{
-const responseIg = await axios.get(`${apis}/download/instagram?url=${args[0]}`);
-const resultlIg = responseIg.data;
-let linkig=resultlIg.data[0].url
-await conn.sendFile(m.chat,linkig, 'error.mp4', `${wm}`, m);
-}catch{
-try{
-const resultD = await instagramDl(args[0]);
-const linkD=resultD[0].download_link
-await conn.sendFile(m.chat, linkD, 'error.mp4', `${wm}`, m);
+try {
+const apiUrl = `${apis}/download/instagram?url=${encodeURIComponent(args[0])}`;
+const apiResponse = await fetch(apiUrl);
+const delius = await apiResponse.json();
+if (!delius || !delius.data || delius.data.length === 0) return m.react("❌");
+const downloadUrl = delius.data[0].url;
+const fileType = delius.data[0].type;
+if (!downloadUrl) return m.react("❌");
+if (fileType === 'image') {
+await conn.sendFile(m.chat, downloadUrl, 'ig.jpg', `${wm}`, m, null, fake);
 await conn.sendMessage(m.chat, {text: waittttt, edit: key})
-} catch{
+} else if (fileType === 'video') {
+await conn.sendFile(m.chat, downloadUrl, 'ig.mp4', `${wm}`, m, null, fake);
+await conn.sendMessage(m.chat, {text: waittttt, edit: key})
+} else {
+return m.react("❌"); 
+}} catch {   
 try {
 const apiUrll = `https://api.betabotz.org/api/download/igdowloader?url=${encodeURIComponent(args[0])}&apikey=bot-secx3`;
 const responsel = await axios.get(apiUrll);
@@ -68,7 +73,7 @@ await conn.sendMessage(m.chat, {text: waittttt, edit: key})
 conn.sendMessage(m.chat, {text: `${lenguajeGB['smsMalError3']()}#report ${lenguajeGB['smsMensError2']()} ${usedPrefix + command}\n\n${wm}`, edit: key});
 console.log(`❗❗ ${lenguajeGB['smsMensError2']()} ${usedPrefix + command} ❗❗`)
 console.log(e)
-}}}}}}}}
+}}}}}}}
 handler.help = ['instagram <link ig>']
 handler.tags = ['downloader']
 handler.command =/^(instagram|ig(dl)?)$/i

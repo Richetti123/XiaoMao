@@ -1,19 +1,11 @@
-FROM node:lts-buster
+Copyright (c) 2024 GataNina-Li <centergatabot@gmail.com>
+ 
+This SOFTWARE is governed by the policy detailed in the document "term.md" provided by GataNina-Li.
 
-RUN apt-get update && \
-apt-get install -y \
-ffmpeg \
-imagemagick \
-webp && \
-apt-get upgrade -y && \
-rm -rf /var/lib/apt/lists/*
+GataBot policy states:
+- Users may use and modify the SOFTWARE without restrictions.
+- GataNina-Li must be cited as the author of the SOFTWARE.
+- Use of the SOFTWARE for commercial purposes is not permitted without the express permission of GataNina-Li.
 
-COPY package.json .
-
-RUN npm install && npm install qrcode-terminal
-
-COPY . .
-
-EXPOSE 5000
-
-CMD ["node", "index.js"]
+The complete GataBot policy is available in the "term.md" document.
+https://github.com/GataNina-Li/GataBot-MD/blob/master/terms.md
