@@ -2,7 +2,7 @@
 <a href="https://github.com/GataNina-Li"><img src="http://readme-typing-svg.herokuapp.com?font=mono&size=17&duration=4000&color=9e62d7&center=falso&vCenter=falso&lines=GataBot-MD++%F0%9F%90%88;Gracias+por+visitar+este+repositorio.+%F0%9F%92%96" height="90px"></a> 
 <img src="https://qu.ax/lHrxl.jpeg" alt="GataBot-MD" style="width: 100%; height: auto; max-width: 500px;">
   
-> Antes de usar este repositorio, visita la **[Política de GataBot. 😼](https://github.com/GataNina-Li/GataBot-MD/blob/master/terms.md)** 
+> Este proyecto es de código abierto, para más información visita la **[Política de GataBot. 😼](https://github.com/GataNina-Li/GataBot-MD/blob/master/terms.md)** 
 </p>
 
 <p align="center">
@@ -61,8 +61,7 @@
 |------|-------------|-------|
 | ☁️ **SKY ULTRA PLUS** | *Activar en SkyUltraPlus* | [![Here](https://img.shields.io/badge/Aquí-blue)](https://github.com/GataNina-Li/GataBot-MD/tree/master#%EF%B8%8F-sky-ultra-plus) |
 | 📦⛏️ **BOXMINE HOST** | *Activar en BoxMine Host* | [![Here](https://img.shields.io/badge/Aquí-blue)](https://github.com/GataNina-Li/GataBot-MD#%EF%B8%8F-boxmine-host) |
-| 🎇 **HOSTING-PY** | *Activar en Hosting-Py* | [![Here](https://img.shields.io/badge/Aquí-blue)](https://github.com/GataNina-Li/GataBot-MD#-hosting-py) |
-| **TK HOST** | *Activar en TK Host* | [![Here](https://img.shields.io/badge/Aquí-blue)](https://github.com/GataNina-Li/GataBot-MD#tk-host) |
+| 🎇 **EDRACLOUD HOST** | *Activar en EdraCloud Host* | [![Here](https://img.shields.io/badge/Aquí-blue)](https://github.com/GataNina-Li/GataBot-MD#-edracloud-host) |
 </details>
 
  <details>
@@ -81,7 +80,6 @@
 
 | TEMA | DESCRIPCIÓN | ATAJO |
 |------|-------------|-------|
-| 🟣 **Heroku** | *Instalación directa por Heroku* | [![Here](https://img.shields.io/badge/Aquí-purple)](https://github.com/GataNina-Li/GataBot-MD#-despliegue) |
 | ⚡ **Replit** | *Instalación directa por Replit* | [![Here](https://img.shields.io/badge/Aquí-orange)](https://github.com/GataNina-Li/GataBot-MD#-despliegue) |
 | ⏏️ **Koyeb** | *Instalación directa por Koyeb* | [![Here](https://img.shields.io/badge/Aquí-blue)](https://github.com/GataNina-Li/GataBot-MD#-despliegue) |
 | 💻 **Windows** | *Instalar para Windows 10 o superior* | [![Here](https://img.shields.io/badge/Aquí-pink)](https://github.com/GataNina-Li/GataBot-MD#-despliegue) |
@@ -254,9 +252,9 @@ grep -q 'bash\|wget' <(dpkg -l) || apt install -y bash wget && wget -O - https:/
 - **Panel:** [`Aquí`](https://panel.skyultraplus.com)
 - **Estado de servicios:** [`Aquí`](https://estado.skyultraplus.com)
 - **Canal de WhatsApp:** [`Aquí`](https://whatsapp.com/channel/0029VakUvreFHWpyWUr4Jr0g)
-- **Comunidad:** [`Aquí`](https://chat.whatsapp.com/JPwcXvPEUwlEOyjI3BpYys)
+- **Comunidad:** [`Aquí`](https://chat.whatsapp.com/E6iWpvGuJ8zJNPbN3zOr0D)
 - **Contacto(s):** [`Gata Dios`](https://wa.me/message/B3KTM5XN2JMRD1) / [`Russell`](https://api.whatsapp.com/send/?phone=15167096032&text&type=phone_number&app_absent=0) / [`elrebelde21`](https://facebook.com/elrebelde21)
-- **Discord:** [`SkyUltraPlus`](https://discord.gg/Ph4eWsZ8)
+- **Discord:** [`SkyUltraPlus`](https://discord.gg/6saUm5cw)
 
 - [x] **Configuración** <details><summary>**Ajustes del Servidor - GataBot-MD**</summary><img src="https://qu.ax/nHowf.jpg"></details>
 ----
@@ -275,48 +273,21 @@ grep -q 'bash\|wget' <(dpkg -l) || apt install -y bash wget && wget -O - https:/
 
 - [x] **Configuración** <details><summary>**Ajustes del Servidor - GataBot-MD**</summary><img src="https://i.imgur.com/tD3NQSR.jpeg"></details>
 -----
-### 🎇 Hosting Py
-<a href="https://dahs.hostingpy.shop/"><img src="https://files.catbox.moe/lr92z2.jpg" height="130px"></a>
+### 🎇 EDRACLOUD HOST
+<a href="https://test.crxsmods.site"><img src="https://qu.ax/pXdEg.jpg" height="130px"></a>
 
-- **Dashboard:** [`Aquí`](https://dahs.hostingpy.shop/)
-- **Panel:** [`Aquí`](https://panel.hostingpy.shop/)
-- **Registrarse:** [`Aquí`](https://dahs.hostingpy.shop/register?ref=GataDios)
+- **Página:** [`Aquí`](https://test.crxsmods.site)
+- **Apk:** [`Aquí`](https://www.mediafire.com/file/6fqf72hfh06e4k4/EdraCloud)
 - **Canal de WhatsApp:** [`Aquí`](https://whatsapp.com/channel/0029Vak4e1R4NVifmh8Tvi3q)
 - **Comunidad:** [`Aquí`](https://chat.whatsapp.com/HT9YFbWTuqO0DQrq6Xxhvx)
-- **Contacto:** [`AdrianOficial`](https://wa.me/595976126756)
+- **Contacto:** [`Adrian`](https://wa.me/595976126756)
 
 - [x] **Configuración** <details><summary>**Ajustes del Servidor - GataBot-MD**</summary><img src="https://i.imgur.com/jD7AT0x.png"></details>
------
-### ¡TK HOST!
-<a href="https://dahs.hostingpy.shop"><img src="https://qu.ax/UzvYt.jpeg" height="130px"></a>
-
-- **Dashboard:** [`Aquí`](https://dash.tk-joanhost.com/register?ref=GataDios)
-- **Panel:** [`Aquí`](https://panel.tk-joanhost.com)
-- **Canal de WhatsApp:** [`Aquí`](https://whatsapp.com/channel/0029VaGGynJLY6d43krQYR2g)
-- **Comunidad:** [`Aquí`](https://chat.whatsapp.com/DOlxV0eOoH7HDunGuZCOCb)
-- **Contacto:** [`Matias`](https://wa.me/5491164123932)
-
-- [x] **Configuración** <details><summary>**Ajustes del Servidor - GataBot-MD**</summary><img src="https://qu.ax/WkhDz.png"></details>
 -----
 ### 🚄 DESPLIEGUE
 <details>
   <summary><b>Toca para ver más.</b></summary>
   
-### 🟣 ACTIVAR EN HEROKU 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/GataNina-Li/GataBotMD-Heroku) 
-### 👇 Añada lo siguente al Buildpack: 
-```bash
-heroku/nodejs
-```
-```bash
-https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git
-```
-```bash
-https://github.com/clhuang/heroku-buildpack-webp-binaries.git
-```
-- [x] Resultado <details><summary>Buildpack</summary><img src="https://i.imgur.com/t3Xzgnh.jpeg"></details>
------
-
 ### ⚡ REPLIT - GATABOT
 [![blog](https://img.shields.io/badge/Replit-GataBotMD-FF0000?style=for-the-badge&logo=youtube&logoColor=white)
 ](https://youtu.be/pQYkq4xv37o)
@@ -364,32 +335,6 @@ Si tiene éxito, le dará un mensaje como: `SUCCESS: specified value was saved`.
 ```
 </details>
 
-----
-### DISTRIBUIDORES AUTORIZADOS O RESELLERS - PREGUNTAS 
-<details>
-<summary><b>¿Te gustaría ser un Distribuidores Autorizados o reseller de GataBot?</b></summary>
-  
-- ¡Contáctanos **[correo electrónico](centergatabot@gmail.com)** o **[Telegram](https://t.me/SoporteGataBot)** para solicitar tu [**Licencia**](https://github.com/GataNina-Li/GataBot-MD/blob/master/terms.md)!
-</details>
-
-<details>
-<summary><b>¿Qué significa ser un Distribuidor Autorizado o reseller en GataBot?</b></summary>
-  
-- Aquellos usuarios que adquieran la licencia de Distribuidores Autorizados o resellers obtienen el derecho legal de utilizar este repositorio para fines educativos, políticos o comerciales, sin poner en riesgo su reputación personal u organizacional.
-</details>
-
-<details>
-<summary><b>¿Dónde puedes solicitar la licencia para ser Distribuidor Autorizado o reseller de GataBot?</b></summary>
-
-  - Te ofrecemos opciones exclusivas: **[Instagram](https://www.instagram.com/gata_dios/)**, **[Telegram](https://t.me/SoporteGataBot)**, y **[correo electrónico](centergatabot@gmail.com)**.
-</details>
-
-<details>
-<summary><b>¿Cómo puedo verificar quién es un distribuidor autorizado en GataBot?</b></summary>
-
-  - Lo hemos simplificado para ti. Si deseas conocer la lista y contactar al reseller para verificar su autenticidad, simplemente visita este **[enlace](https://github.com/GataNina-Li/GataBot-MD/blob/master/dealers.md)**. La licencia debe estar disponible públicamente en el repositorio del distribuidor, y si tanto su nombre de usuario en GitHub como el código de la licencia coinciden con nuestra lista, significa que está **[verificado](https://github.com/GataNina-Li/GataBot-MD/blob/master/terms.md)** como parte de resellers de GataBot. **¡Estamos aquí para garantizar transparencia y calidad en nuestra red de distribución!**
-</details>
-
 > Recuerda leer la **[Política de GataBot. 😼](https://github.com/GataNina-Li/GataBot-MD/blob/master/terms.md)** antes de hacer algo con este repositorio. 
   
 ----
@@ -413,4 +358,4 @@ Si tiene éxito, le dará un mensaje como: `SUCCESS: specified value was saved`.
 
 ### 🌟 CREADORA 
 [![GataNina-Li](https://github.com/GataNina-Li.png?size=100)](https://github.com/GataNina-Li) 
-> Copyright (c) 2024 **[GataNina-Li](https://github.com/GataNina-Li/GataBot-MD/blob/master/LICENSE)**.
+> Copyright (c) 2025 **[GataNina-Li](https://github.com/GataNina-Li/GataBot-MD/blob/master/LICENSE)**.

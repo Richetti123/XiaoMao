@@ -9,7 +9,8 @@ const require = createRequire(__dirname)
 
 let handler = async (m, _2) => {
 if (m.fromMe) return
-let { conn, usedPrefix, noPrefix, args, groupMetadata } = _2
+let { conn, isROwner, usedPrefix, noPrefix, args, groupMetadata } = _2
+if (!isROwner) return
   let _return
   let _syntax = ''
   let _text = (/^=/.test(usedPrefix) ? 'return ' : '') + noPrefix
@@ -34,7 +35,7 @@ let { conn, usedPrefix, noPrefix, args, groupMetadata } = _2
     if (err) _syntax = '```' + err + '```\n\n'
     _return = e
   } finally {
-    conn.reply(m.chat, _syntax + format(_return), m)
+    conn.reply(m.chat, _syntax + format(_return), null)
     m.exp = old
   }
 }
@@ -42,7 +43,7 @@ handler.help = ['> ', '=> ']
 handler.tags = ['advanced']
 handler.customPrefix = /^=?> /
 handler.command = /(?:)/i
-handler.rowner = true
+//handler.rowner = true
 
 export default handler
 
