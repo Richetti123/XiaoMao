@@ -26,7 +26,7 @@ say('Michi\nBot', {
 font: 'chrome',
 align: 'center',
 gradient: ['red', 'magenta']})
-say(`Creado por:\nRichetti (+56928561853)\nY\nGeriPium(+56941827124)`, {
+say(`Creado por:\nRichetti (+56928561853)`, {
 font: 'console',
 align: 'center',
 gradient: ['red', 'magenta']})
@@ -90,9 +90,6 @@ console.log(chalk.yellow(`╭${lineM}
 ┊${chalk.blueBright('┊')}${chalk.cyan(`𓃠 Versión: ${packageJsonObj.version}`)}
 ┊${chalk.blueBright('┊')}${chalk.cyan(`💜 Descripción: El mejor bot de whatsapp`)}
 ┊${chalk.blueBright('┊')}${chalk.cyan(`😺 Project Author: Richetti (@richetti_123)`)}
-┊${chalk.blueBright('┊')}${chalk.blueBright('┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅')} 
-┊${chalk.blueBright('┊')}${chalk.yellow(`💜 Colaborador:`)}
-┊${chalk.blueBright('┊')}${chalk.yellow(`• GeriPium `)}
 ┊${chalk.blueBright('╰┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅')} 
 ┊${chalk.blueBright('╭┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅')}
 ┊${chalk.blueBright('┊')}${chalk.cyan(`⏰ Hora Actual :`)}
