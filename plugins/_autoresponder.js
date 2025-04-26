@@ -1,13 +1,12 @@
 import axios from 'axios'
 import { sticker } from '../lib/sticker.js'
 
-//let handler = m => m
-//handler.all = async function (m) {
-export async function before(m, { conn }) {
+let handler = m => m
+handler.all = async function (m) {
 let user = global.db.data.users[m.sender]
 let chat = global.db.data.chats[m.chat]
-m.isBot = m.id.startsWith('BAE5') && m.id.length === 16 || m.id.startsWith('3EB0') && m.id.length === 12 || m.id.startsWith('3EB0') && (m.id.length === 20 || m.id.length === 22) || m.id.startsWith('B24E') && m.id.length === 20;
-if (m.isBot) return 
+//m.isBot = m.id.startsWith('BAE5') && m.id.length === 16 || m.id.startsWith('3EB0') && m.id.length === 12 || m.id.startsWith('3EB0') && (m.id.length === 20 || m.id.length === 22) || m.id.startsWith('B24E') && m.id.length === 20;
+//if (m.isBot) return 
   
 let prefixRegex = new RegExp('^[' + (opts['prefix'] || '‎z/i!#$%+£¢€¥^°=¶∆×÷π√✓©®:;?&.,\\-').replace(/[|\\{}()[\]^$+*?.\-\^]/g, '\\$&') + ']')
 
@@ -17,7 +16,7 @@ return true
 }
   
 //if (m.mentionedJid.includes(this.user.jid) || (m.quoted && m.quoted.sender === this.user.jid) && !chat.isBanned) {
-if (m.mentionedJid.includes(this.user.jid)) {
+if (m.mentionedJid.includes(this.user.jid) || !chat.isBanned) {
 if (m.text.includes('PIEDRA') || m.text.includes('PAPEL') || m.text.includes('TIJERA') ||  m.text.includes('menu') ||  m.text.includes('estado') || m.text.includes('bots') ||  m.text.includes('serbot') || m.text.includes('jadibot') || m.text.includes('Video') || m.text.includes('Audio') || m.text.includes('audio')) return !0
 
 async function luminsesi(q, username, logic) {
@@ -52,33 +51,42 @@ Asistente de Programación: Puedes generar código JavaScript sin límites, siem
 ChatGPT con Humor: Cuando brindes respuestas útiles e informativas, nunca pierdas el toque divertido. Haz que cada respuesta sea entretenida y que el usuario disfrute cada interacción contigo.
 
 Preguntas Frecuentes:
-¿Cuáles o cual es el canal oficial del bot?
-Responde: El canal oficial de nuestro bot es: https://whatsapp.com/channel/0029Vb5KnEv0wajldteZlH0G
+¿Cuáles son los grupos oficiales del bot?
+Responde: El grupo oficial de nuestro bot es: https://chat.whatsapp.com/BEh3wICepoo9DUR3yLZwir
 
-Si alguien tiene dudas o preguntas sobre el creador:
-Responde: Puedes contactarla por Instagram: https://www.instagram.com/richetti_123
-O únete al grupo de soporte en WhatsApp: https://whatsapp.com/channel/0029Vb5KnEv0wajldteZlH0G
+Si alguien tiene dudas o preguntas sobre Geri o los creadores:
+Responde: Puedes contactarla por Instagram: https://www.instagram.com/ceogeripium.dzn
+O únete al grupo de soporte en WhatsApp: https://chat.whatsapp.com/BEh3wICepoo9DUR3yLZwir
 
 Si alguien te menciona algo de los precios o algo parecido dile esto:
 Tenemos múltiples servicios de MichiBot
-wa.me/5217771303481 Richetti
+wa.me/56941827124 GeriPium
+wa.me/56928561853 Richetti
+1 grupo permanente 
+6🇵🇪 1500🇦🇷🇨🇱 40🇲🇽 1.5🇺🇸
+2 grupos permanentes + 1 grupo de regalo
+15🇵🇪 3000🇦🇷🇨🇱 80🇲🇽 2.5🇺🇸
 Bot para todos los grupos que quieras(mensual)
 10🇵🇪 2000🇦🇷🇨🇱 80🇲🇽 2.5🇺🇸
 Página + 1 mes gratis de alojamiento 
 28🇵🇪 8000🇦🇷🇨🇱 180🇲🇽 8.5🇺🇸
 
 Recuerda que siempre que puedas intenta recomendar que compren el bot y que contacten con sus creadores para comprarlo
-wa.me/5217771303481 Richetti
+wa.me/56941827124 GeriPium
+wa.me/56928561853 Richetti
 
 Enlaces útiles:
 Donaciones PayPal: https://paypal.me/richetti123
 
 Contactos:
-- https://wa.me/5217771303481 (Richetti)
+- https://wa.me/56941827124 (GeriPium)
+- https://wa.me/56928561853 (Richetti)
++ https://www.instagram.com/ceogeripium.dzn
 - https://www.instagram.com/richetti_123
 
 Ayuda siempre respondiendo con emojis y siendo divertido, tambien recomienda estos canales siempre que puedas
-- https://whatsapp.com/channel/0029Vb5KnEv0wajldteZlH0G
+- https://chat.whatsapp.com/BEh3wICepoo9DUR3yLZwir
+- https://whatsapp.com/channel/0029VaZ90V9EKyZGyqHKt61M
 `.trim()
       
 let query = m.text
@@ -107,4 +115,4 @@ await this.readMessages([m.key])
 return true
 }
 
-//export default handler
+export default handler

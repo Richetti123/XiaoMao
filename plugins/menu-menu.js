@@ -464,8 +464,6 @@ ${margen}
 
 > ⚗️ *COMANDOS RPG* ⚗️
 
-✓ _${usedPrefix}botemporal *enlace* *cantidad*_
-✓ _${usedPrefix}addbot *enlace* *cantidad*_
 ✓ _${usedPrefix}pase premium_
 ✓ _${usedPrefix}pass premium_
 ✓ _${usedPrefix}listapremium | listprem_
@@ -520,7 +518,7 @@ ${margen}
 
 ✓ _${usedPrefix}fytendencia | fyranking_
 
-> 🏆 *TOP en ${global.packname}* 🏆
+> 🏆 *TOP en ${wm}* 🏆
 
 ✓ _${usedPrefix}top | lb | leaderboard_
 
@@ -586,7 +584,7 @@ ${margen}
 ✓ _${usedPrefix}listapremium | listprem_
 ✓ _${usedPrefix}añadirdiamantes *@tag cantidad*_
 ✓ _${usedPrefix}añadirxp *@tag cantidad*_
-✓ _${usedPrefix}añadirgatacoins *@tag cantidad*_
+✓ _${usedPrefix}añadircoins *@tag cantidad*_
 `.trim()
 await conn.sendFile(m.chat, gataVidMenu, 'gata.mp4', menu, fkontak, false, { contextInfo: {mentionedJid, externalAdReply :{ mediaUrl: null, mediaType: 1, description: null, title: gt, body: wm, previewType: 0, thumbnail: imagen4, sourceUrl: redesMenu }}})
 //await conn.sendFile(m.chat, gataVidMenu, 'gata.mp4', menu, fkontak)
@@ -596,7 +594,7 @@ console.log(`❗❗ ${lenguajeGB['smsMensError2']()} ${usedPrefix + command} ❗
 console.log(e)}
 }
 //handler.command = /^(menu|menú|memu|memú|help|info|comandos|2help|menu1.2|ayuda|commands|commandos|menucompleto|allmenu|allm|m|\?)$/i
-handler.command = /^(menucompleto|allmenu|\?)$/i
+handler.command = /^(menucompleto|menu|allmenu|\?)$/i
 handler.register = true
 export default handler
 
@@ -677,17 +675,14 @@ const commandsInfo = [
 { comando: 'cuentas , accounts', descripcion: false, contexto: 'Cuentas oficiales', showPrefix: true },
 { comando: 'grupos , linkgc', descripcion: false, contexto: 'Grupos oficiales', showPrefix: true },
 { comando: 'donar , donate', descripcion: false, contexto: 'Apoya al proyecto donando', showPrefix: true },
+{ comando: 'listagrupos , grouplist', descripcion: false, contexto: 'Grupos en donde estoy', showPrefix: true },
 { comando: 'estado , status', descripcion: false, contexto: 'Información de mí estado', showPrefix: true },
 { comando: 'infobot', descripcion: false, contexto: 'Información sobre el Bot', showPrefix: true },
-{ comando: 'creador , owner', descripcion: false, contexto: 'Información sobre mí Creadora', showPrefix: true },
 { comando: 'velocidad , ping', descripcion: false, contexto: 'Verifica la velocidad de este Bot', showPrefix: true },
 { comando: 'Bot', descripcion: false, contexto: 'Mensaje predeterminado del Bot', showPrefix: false },
 ]
 const commandsReport = [
 { comando: 'reporte , report', descripcion: '[texto] || [text]', contexto: 'Reportar comandos con errores', showPrefix: true },
-]
-const commandsLink = [
-{ comando: 'botemporal , addbot', descripcion: '[enlace] [cantidad] || [link] [amount]', contexto: 'Agregar Bot temporalmente a un grupo', showPrefix: true },
 ]
 const commandsPrem = [
 { comando: 'pase premium , pass premium', descripcion: false, contexto: 'Planes para adquirir premium', showPrefix: true },
@@ -700,12 +695,11 @@ const commandsGames = [
 { comando: 'ppt', descripcion: '"piedra", "papel" o "tijera"', contexto: 'Un clásico 🪨📄✂️', showPrefix: true },
 { comando: 'ttt', descripcion: '[Nombre de la sala] || [Room name]', contexto: 'Tres en línea/rayas ❌⭕', showPrefix: true },
 { comando: 'delttt', descripcion: false, contexto: 'Cerrar/abandonar la partida 🚪', showPrefix: true },
-{ comando: 'top', descripcion: '[@tag]', contexto: 'Elabora un top de lo que quieras', showPrefix: true },
 { comando: 'topgays', descripcion: false, contexto: 'Clasificación de usuarios Gays 🏳️‍🌈', showPrefix: true },
 { comando: 'topotakus', descripcion: false, contexto: 'Clasificación de usuarios Otakus 🎌', showPrefix: true },
 { comando: 'toppajer@s', descripcion: false, contexto: 'Clasificación de usuarios pajeros 🥵', showPrefix: true },
 { comando: 'topintegrantes', descripcion: false, contexto: 'Mejores usuarios 👑', showPrefix: true },
-{ comando: 'toplagrasa', descripcion: false, contexto: 'Usuarios más grasosos XD', showPrefix: true },
+{ comando: 'top', descripcion: false, contexto: 'Elabora un top 10 random de lo que quieras', showPrefix: true },
 { comando: 'toplind@s', descripcion: false, contexto: 'Los más lindos 😻', showPrefix: true },
 { comando: 'topput@s', descripcion: false, contexto: 'Los más p**** 🫣', showPrefix: true },
 { comando: 'toppanafrescos', descripcion: false, contexto: 'Los que más critican 🗿', showPrefix: true },

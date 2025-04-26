@@ -1,4 +1,4 @@
-export async function before(m, conn) {
+export async function all(m, conn) {
    
 if (!m.isGroup)
 return

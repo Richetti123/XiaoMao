@@ -8,13 +8,11 @@ await conn.sendMessage(m.chat, {text: `🚀🚀🚀🚀`, edit: key})
 await delay(1000 * 1)
 await conn.sendMessage(m.chat, {text: `🚀🚀🚀🚀🚀🚀`, edit: key})
 await conn.sendMessage(m.chat, {text: `𝙍𝙚𝙞𝙣𝙞𝙘𝙞𝙖𝙧 | 𝙍𝙚𝙨𝙩𝙖𝙧𝙩`, edit: key})
-//process.send('reset')
-process.exit(0); 
-}
+process.send('reset')}
 handler.help = ['restart'] 
 handler.tags = ['owner']
 handler.command = ['restart','reiniciar'] 
-handler.owner = true
+handler.rowner = true
 export default handler
 
 const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms))

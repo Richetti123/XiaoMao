@@ -26,21 +26,12 @@ say('Michi\nBot', {
 font: 'chrome',
 align: 'center',
 gradient: ['red', 'magenta']})
-say(`Por Richetti`, {
+say(`Creado por:\nRichetti (+56928561853)\nY\nGeriPium(+56941827124)`, {
 font: 'console',
 align: 'center',
 gradient: ['red', 'magenta']})
 
 var isRunning = false
-
-process.on('uncaughtException', (err) => {
-if (err.code === 'ENOSPC') {
-console.error('Se ha detectado ENOSPC (sin espacio o límite de watchers alcanzado), reiniciando....')
-} else {
-console.error('Error no capturado:', err)
-}
-process.exit(1)
-})
 
 async function start(file) {
 if (isRunning) return
@@ -95,10 +86,13 @@ console.log(chalk.yellow(`╭${lineM}
 ┊${chalk.blueBright('╭┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅')}
 ┊${chalk.blueBright('┊')} ${chalk.blue.bold(`🟢INFORMACIÓN :`)}
 ┊${chalk.blueBright('┊')} ${chalk.blueBright('┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅')} 
-┊${chalk.blueBright('┊')}${chalk.cyan(`💚 Nombre: ${packageJsonObj.name}`)}
+┊${chalk.blueBright('┊')}${chalk.cyan(`💚 Nombre: MichiBot`)}
 ┊${chalk.blueBright('┊')}${chalk.cyan(`𓃠 Versión: ${packageJsonObj.version}`)}
-┊${chalk.blueBright('┊')}${chalk.cyan(`💜 Descripción: ${packageJsonObj.description}`)}
-┊${chalk.blueBright('┊')}${chalk.cyan(`😺 Project Author: ${packageJsonObj.author.name} (@richetti_123)`)}
+┊${chalk.blueBright('┊')}${chalk.cyan(`💜 Descripción: El mejor bot de whatsapp`)}
+┊${chalk.blueBright('┊')}${chalk.cyan(`😺 Project Author: Richetti (@richetti_123)`)}
+┊${chalk.blueBright('┊')}${chalk.blueBright('┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅')} 
+┊${chalk.blueBright('┊')}${chalk.yellow(`💜 Colaborador:`)}
+┊${chalk.blueBright('┊')}${chalk.yellow(`• GeriPium `)}
 ┊${chalk.blueBright('╰┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅')} 
 ┊${chalk.blueBright('╭┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅')}
 ┊${chalk.blueBright('┊')}${chalk.cyan(`⏰ Hora Actual :`)}

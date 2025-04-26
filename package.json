@@ -1,7 +1,7 @@
 {
 "name": "MichiBot",
 "version": "1.7.0", 
-"description": "Super Bot WhatsApp",
+"description": "El mejor Bot",
 "main": "index.js",
 "type": "module",
     
@@ -19,7 +19,7 @@
     
 "homepage": "https://github.com/GataNina-Li/GataBot-MD",
 "author": {
-"name": "MichiBot" },
+"name": "Richetti" },
     
 "repository": {
 "type": "git",

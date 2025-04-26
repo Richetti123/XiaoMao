@@ -5,30 +5,26 @@ import fs from 'fs'
 const { generateWAMessageFromContent, prepareWAMessageMedia, proto }  = (await import(global.baileys))
 import '../config.js'
 
-//let handler = m => m
-//handler.all = async function (m) {
-export async function before(m, { conn, text }) {	
+let handler = m => m
+handler.all = async function (m) {
 global.key = ''
 let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? this.user.jid : m.sender
-let pp = await this.profilePictureUrl(who, 'image').catch(_ => "https://qu.ax/ZJKqt.jpg")
+let pp = await this.profilePictureUrl(who, 'image').catch(_ => "https://i.ibb.co/Jj0vzbqV/Menu2.jpg")
 
 // Fake
 global.fkontak = { "key": { "participants":"0@s.whatsapp.net", "remoteJid": "status@broadcast", "fromMe": false, "id": "Halo" }, "message": { "contactMessage": { "vcard": `BEGIN:VCARD\nVERSION:3.0\nN:Sy;Bot;;;\nFN:y\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD` }}, "participant": "0@s.whatsapp.net" }
-global.fakeChannel = { contextInfo: { mentionedJid: await this.parseMention(text), forwardingScore: 1, isForwarded: true, forwardedNewsletterMessageInfo: { newsletterJid: channelRD.id, serverMessageId: 100, newsletterName: channelRD.name }, externalAdReply: { title: wm, body: vs, mediaType: 1, renderLargerThumbnail: true, previewType: `PHOTO`, thumbnailUrl: gataImg, thumbnail: imagen1, sourceUrl: accountsgb }}}, { quoted: m }
-
-global.fake = { contextInfo: { mentionedJid: await this.parseMention(text), forwardingScore: 1, isForwarded: true, forwardedNewsletterMessageInfo: { newsletterJid: channelRD.id, serverMessageId: '', newsletterName: channelRD.name }}}
-
-global.fake2 = { contextInfo: { mentionedJid: await this.parseMention(text), forwardingScore: 1, isForwarded: true, forwardedNewsletterMessageInfo: { newsletterJid: channelRD.id, serverMessageId: '', newsletterName: channelRD.name }, externalAdReply: { title: wm, body: vs, mediaType: 1, renderLargerThumbnail: true, previewType: `PHOTO`, thumbnailUrl: pp, sourceUrl: accountsgb }}}
+global.fakeChannel = { contextInfo: { mentionedJid: null, forwardingScore: 1, isForwarded: true, forwardedNewsletterMessageInfo: { newsletterJid: channelRD.id, serverMessageId: 100, newsletterName: channelRD.name }, externalAdReply: { title: wm, body: vs, mediaType: 1, renderLargerThumbnail: false, previewType: `PHOTO`, thumbnailUrl: gataImg, thumbnail: imagen1, sourceUrl: accountsgb }}}, { quoted: m }
+global.fake = { contextInfo: { mentionedJid: null, forwardingScore: 1, isForwarded: true, forwardedNewsletterMessageInfo: { newsletterJid: channelRD.id, serverMessageId: '', newsletterName: channelRD.name }, externalAdReply: { title: wm, body: vs, mediaType: 1, renderLargerThumbnail: false, previewType: `PHOTO`, thumbnailUrl: pp, sourceUrl: accountsgb }}}
   
 const estilo = { key: {  fromMe: false, participant: `0@s.whatsapp.net`, ...(m.chat ? { remoteJid: "5219992095479-1625305606@g.us" } : {}) }, message: { orderMessage: { itemCount : -999999, status: 1, surface : 1, message: 'Super Bot WhatsApp', orderTitle: 'Bang', thumbnail: gataMenu, sellerJid: '0@s.whatsapp.net' }}}
 const estiloaudio = { key: {  fromMe: false, participant: `0@s.whatsapp.net`, ...(m.chat ? { remoteJid: "5219992095479-1625305606@g.us" } : {}) }, message: { "audioMessage": { "mimetype":"audio/ogg; codecs=opus", "seconds": "99569", "ptt": "true"   
 }}} 
 //let bottime = `${name} 𝗧𝗜𝗠𝗘: ${moment.tz('America/Bogota').format('HH:mm:ss')}`//America/Los_Angeles
 let ftroli = { key: { remoteJid: 'status@broadcast', participant: '0@s.whatsapp.net' }, message: { orderMessage: { itemCount: 99, status: 1, surface: 1, message: wm, orderTitle: wm, sellerJid: '0@s.whatsapp.net' } } }
-let fgif = {key: {participant : '0@s.whatsapp.net'}, message: {"videoMessage": { "title": wm, "h": `Hmm`, 'seconds': '999999999', 'gifPlayback': 'true', 'caption': bottime, 'jpegThumbnail': fs.readFileSync('./Menu2.jpg')}}}
+let fgif = {key: {participant : '0@s.whatsapp.net'}, message: {"videoMessage": { "title": wm, "h": `Hmm`, 'seconds': '999999999', 'gifPlayback': 'true', 'caption': bottime, 'jpegThumbnail': fs.readFileSync('./media/menus/Menu3.jpg')}}}
                              
 let enlace = { contextInfo: { externalAdReply: {title: wm + ' 🐈', body: 'support group' , sourceUrl: redesMenu, thumbnail: await(await fetch(gataMenu)).buffer() }}}
-let enlace2 = { contextInfo: { externalAdReply: { showAdAttribution: true, mediaUrl: yt, mediaType: 'VIDEO', description: '', title: wm, body: wm, thumbnailUrl: gataMenu, sourceUrl: accountsgb }}}
+let enlace2 = { contextInfo: { externalAdReply: { showAdAttribution: true, mediaUrl: yt, mediaType: 'VIDEO', description: '', title: wm, body: '😻 𝗦𝘂𝗽𝗲𝗿 𝗚𝗮𝘁𝗮𝗕𝗼𝘁-𝗠𝗗 - 𝗪𝗵𝗮𝘁𝘀𝗔𝗽𝗽 ', thumbnailUrl: gataMenu, sourceUrl: accountsgb }}}
 let dos = [enlace, enlace2]  
 global.wait = "⌛ *`Cargando...`*\n*✪✦✦⊹⊹⊹⊹⊹⊹⊹⊹✪* `20%`"
 global.waitt = "⏳ *`Cargando....`*\n*✪✦✦✦✦⊹⊹⊹⊹⊹⊹✪* `40%`"
@@ -42,14 +38,11 @@ li.DESTRAVip.to
 ☣✝ﾚⅰɬ◊D͠Я◊ⅰD͠  D͠∑ㄅɬЯ∆√✝☣`
   
 }
-//export default handler
-
-global.bot = "wa.me/5217771303481"
+export default handler
 global.canales = [canal1, canal2, canal3, canal4][Math.floor(Math.random() * 4)]
 global.welgata = [tk, ig, md, yt, paypal, fb, ths, asistencia][Math.floor(Math.random() * 8)]
 global.redesMenu = [all, canal1, canal2, canal3, canal4, md, ig, paypal, yt, asistencia, fb, tk][Math.floor(Math.random() * 12)]
 global.accountsgb = [all, canal1, canal2, canal3, canal4, tk, ig, yt, paypal, fb, ths, md, asistencia][Math.floor(Math.random() * 13)]
-global.cuentas = [grupo1, grupo2, grupo_collab1, grupo_collab2, grupo_collab3, grupo_collab4][Math.floor(Math.random() * 6)]
 
 global.canalIdGB = ["120363400536272752@newsletter"]
 global.canalNombreGB = ["CANAL MICHIBOT😼🤖"]
@@ -70,33 +63,33 @@ global.imagen11 = fs.readFileSync("./Menu2.jpg")
 global.imagen12 = fs.readFileSync("./Menu2.jpg")
 global.imagen13 = fs.readFileSync("./Menu2.jpg")
 
-global.img = 'https://qu.ax/ZJKqt.jpg' 
-global.img2 = img //'https://qu.ax/ZJKqt.jpg' 
+global.img = 'https://i.ibb.co/Jj0vzbqV/Menu2.jpg'
+global.img2 = 'https://i.ibb.co/Jj0vzbqV/Menu2.jpg'
 
-global.img3 = img //'https://qu.ax/ZJKqt.jpg'  //prem
-global.img4 = img //'https://qu.ax/ZJKqt.jpg'  //prem
+global.img3 = 'https://i.ibb.co/Jj0vzbqV/Menu2.jpg' //prem
+global.img4 = 'https://i.ibb.co/Jj0vzbqV/Menu2.jpg' //prem
 
-global.img5 = img //'https://qu.ax/ZJKqt.jpg' 
-global.img6 = img //'https://qu.ax/ZJKqt.jpg' 
-global.img7 = img //'https://qu.ax/ZJKqt.jpg'
-global.img8 = img //'https://qu.ax/ZJKqt.jpg' 
-global.img9 = img //'https://qu.ax/ZJKqt.jpg' 
+global.img5 = 'https://i.ibb.co/Jj0vzbqV/Menu2.jpg'
+global.img6 = 'https://i.ibb.co/Jj0vzbqV/Menu2.jpg'
+global.img7 = 'https://i.ibb.co/Jj0vzbqV/Menu2.jpg'
+global.img8 = 'https://i.ibb.co/Jj0vzbqV/Menu2.jpg'
+global.img9 = 'https://i.ibb.co/Jj0vzbqV/Menu2.jpg'
 
-global.img10 = img //'https://qu.ax/ZJKqt.jpg' 
-global.img11 = img //'https://qu.ax/ZJKqt.jpg' 
-global.img12 = img //'https://qu.ax/ZJKqt.jpg'
-global.img13 = img //'https://qu.ax/ZJKqt.jpg' 
-global.img14 = img //'https://qu.ax/ZJKqt.jpg' 
-global.img15 = img //'https://qu.ax/ZJKqt.jpg' 
+global.img10 = 'https://i.ibb.co/Jj0vzbqV/Menu2.jpg'
+global.img11 = 'https://i.ibb.co/Jj0vzbqV/Menu2.jpg'
+global.img12 = 'https://i.ibb.co/Jj0vzbqV/Menu2.jpg'
+global.img13 = 'https://i.ibb.co/Jj0vzbqV/Menu2.jpg'
+global.img14 = 'https://i.ibb.co/Jj0vzbqV/Menu2.jpg'
+global.img15 = 'https://i.ibb.co/Jj0vzbqV/Menu2.jpg'
 
-global.img16 = img //'https://qu.ax/ZJKqt.jpg'  //+18
+global.img16 = 'https://i.ibb.co/Jj0vzbqV/Menu2.jpg' //+18
 
-global.img17 = img //'https://qu.ax/ZJKqt.jpg' 
-global.img18 = img //'https://qu.ax/ZJKqt.jpg' 
+global.img17 = 'https://i.ibb.co/Jj0vzbqV/Menu2.jpg'
+global.img18 = 'https://i.ibb.co/Jj0vzbqV/Menu2.jpg'
 
-global.logogit = img //'https://qu.ax/ZJKqt.jpg' 
+global.logogit = 'https://i.ibb.co/Jj0vzbqV/Menu2.jpg'
 
-global.gataVidMenu = ['https://qu.ax/ZJKqt.jpg' , 'https://qu.ax/ZJKqt.jpg' , 'https://qu.ax/ZJKqt.jpg' ][Math.floor(Math.random() * 3)]
+global.gataVidMenu = ['https://i.ibb.co/Jj0vzbqV/Menu2.jpg', 'https://i.ibb.co/Jj0vzbqV/Menu2.jpg', 'https://i.ibb.co/Jj0vzbqV/Menu2.jpg'][Math.floor(Math.random() * 3)]
 global.gataMenu = [img, img2, img6, img7, img8, img9, img13, img14, img15, img17, img18][Math.floor(Math.random() * 11)]
 global.gataImg = [imagen1, imagen2, imagen3, imagen4, imagen5, imagen6, imagen7, imagen8, imagen9, imagen10, imagen11, imagen12, imagen13][Math.floor(Math.random() * 13)]
 

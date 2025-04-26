@@ -60,44 +60,50 @@ let handler = async (m, { conn, usedPrefix }) => {
     let latensi = speed() - timestamp;
     const { restrict } = global.db.data.settings[conn.user.jid] || {}
     const { autoread } = global.opts
-    let pp = imagen1
+    let pp = gataMenu
 
 getSystemInfo().then(async (data) => {
 let info = `╭━━━━[ ${gt} ]━━━━━⬣
-┃➥ *CREADOR*
-┃ღ *Richetti*
+┃➥ *CREADORA | CREATOR*
+┃ღ ${wm}
 ┃┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
-┃➥ *CONTACTO* 
+┃➥ *CONTACTO | CONTACT* 
 ┃ღ *${ig}*
 ┃┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
-┃𓃠 *VERSIÓN ACTUAL*
+┃𓃠 *VERSIÓN ACTUAL | VERSION*
 ┃ღ ${vs}
 ┃┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
-┃➥ *TOTAL COMANDOS*
+┃➥ *PREFIJO | PREFIX*
+┃ღ *${usedPrefix}*
+┃┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
+┃➥ *TOTAL COMANDOS | COMMANDS*
 ┃ღ ${totalf}
 ┃┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
-┃➥ *CHATS PRIVADOS*
+┃➥ *CHATS PRIVADOS | PRIVATE CHAT*
 ┃ღ ${chats.length - groupsIn.length}
 ┃┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
-┃➥ *CHATS DE GRUPOS*
+┃➥ *CHATS DE GRUPOS | GROUP CHAT*
 ┃ღ ${groupsIn.length}
 ┃┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
-┃➥ *CHATS EN TOTAL*
+┃➥ *CHATS EN TOTAL | TOTAL CHATS*
 ┃ღ ${chats.length}
 ┃┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
-┃➥ *ACTIVIDAD* 
+┃➥ *ACTIVIDAD | ACTIVITY* 
 ┃ღ ${uptime}
 ┃┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
-┃➥ *VELOCIDAD*
+┃➥ *VELOCIDAD | SPEED*
  ${latensi.toFixed(4)} ms
 ┃┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
-┃➥ *COMANDO EJECUTANDO* 
+┃➥ *BOT SECUNDARIOS ACTIVOS | ACTIVE SECONDARY BACKS* 
+┃ღ ${totalUsers}
+┃┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
+┃➥ *COMANDO EJECUTANDO | COMMAND EXECUTING* 
 ┃ღ ${toNum(totalStats)}/${totalStats}
 ┃┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
-┃➥ *GRUPOS REGISTRADOS* 
+┃➥ *GRUPOS REGISTRANDO | REGISTERED GROUPS* 
 ┃ღ ${toNum(totalchats)}/${totalchats}
 ┃┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
-┃➥ *USUARIOS REGISTRADOS* 
+┃➥ *USUARIOS REGISTRADO | USERS REGISTRATION* 
 ┃ღ ${rtotalreg} de ${totalreg} users totales
 ┃┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
 ┃➥ *AUTOREAD*
@@ -106,7 +112,7 @@ let info = `╭━━━━[ ${gt} ]━━━━━⬣
 ┃➥ *RESTRICT* 
 ┃ღ ${restrict ? '*Activado ✔*' : '*Desactivado ✘*'} 
 ┃
-╰━━━[ 𝙄𝙣𝙛𝙤𝙧𝙢𝙖𝙘𝙞ó𝙣 ]━━⬣
+╰━━━[ 𝙄𝙣𝙛𝙤𝙧𝙢𝙖𝙘𝙞ó𝙣 | 𝙄𝙣𝙛𝙤𝙧𝙢𝙖𝙩𝙞𝙤𝙣 ]━━⬣
 `;
 
 await conn.sendFile(m.chat, gataImg, 'lp.jpg', info, fkontak, false, { contextInfo: {externalAdReply :{ mediaUrl: null, mediaType: 1, description: null, title: gt, body: wm, previewType: 0, thumbnail: gataImg, sourceUrl: accountsgb }}});
@@ -114,7 +120,7 @@ await conn.sendFile(m.chat, gataImg, 'lp.jpg', info, fkontak, false, { contextIn
 }
 handler.help = ['infobot']
 handler.tags = ['info', 'tools']
-handler.command = /^(infobot|informacionbot|infogata|informacióngata|owner|creador|informaciongata)$/i
+handler.command = /^(infobot|informacionbot|infogata|informacióngata|informaciongata)$/i
 export default handler;
 
 function toNum(number) {
